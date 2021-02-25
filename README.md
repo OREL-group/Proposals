@@ -1,5 +1,5 @@
 # Proposals
-Collection of materials for conference submissions, grant proposals, abstrats, and associated produced content. 
+Collection of materials for conference submissions, grant proposals, abstracts, and associated produced content. 
 
 
 ### Legacy Account Repo for Proposals
