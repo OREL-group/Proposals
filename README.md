@@ -3,4 +3,7 @@ Collection of materials for conference submissions, grant proposals, abstracts, 
 
 
 ### Legacy Account Repo for Proposals
-https://github.com/Orthogonal-Research-Lab/Proposals
+[link](https://github.com/Orthogonal-Research-Lab/Proposals)
+
+### Legacy Repo for Conference Submissions
+[link](https://github.com/Orthogonal-Research-Lab/Conference-Submissions)
