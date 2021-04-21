@@ -1,0 +1,317 @@
+\documentclass{sigchi}
+
+% Use this section to set the ACM copyright statement (e.g. for
+% preprints).  Consult the conference website for the camera-ready
+% copyright statement.
+
+% Copyright
+\CopyrightYear{2021}
+%\setcopyright{acmcopyright}
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+% DOI
+\doi{https://doi.org/10.1145/3313831.XXXXXXX}
+% ISBN
+\isbn{978-1-4503-6708-0/20/04}
+%Conference
+\conferenceinfo{CHI'21,}{May 8--13, 2021, Yokohama, Japan (Virtual)}
+%Price
+\acmPrice{\$15.00}
+
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+%% HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
+%% Please note you need to make sure the copy for your specific
+%% license is used here!
+% \toappear{
+% Permission to make digital or hard copies of all or part of this work
+% for personal or classroom use is granted without fee provided that
+% copies are not made or distributed for profit or commercial advantage
+% and that copies bear this notice and the full citation on the first
+% page. Copyrights for components of this work owned by others than ACM
+% must be honored. Abstracting with credit is permitted. To copy
+% otherwise, or republish, to post on servers or to redistribute to
+% lists, requires prior specific permission and/or a fee. Request
+% permissions from \href{mailto:Permissions@acm.org}{Permissions@acm.org}. \\
+% \emph{CHI '16},  May 07--12, 2016, San Jose, CA, USA \\
+% ACM xxx-x-xxxx-xxxx-x/xx/xx\ldots \$15.00 \\
+% DOI: \url{http://dx.doi.org/xx.xxxx/xxxxxxx.xxxxxxx}
+% }
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy
+% \pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}       % to better equalize the last page
+\usepackage{graphics}      % for EPS, load graphicx instead 
+\usepackage[T1]{fontenc}   % for umlauts and other diaeresis
+\usepackage{txfonts}
+\usepackage{mathptmx}
+\usepackage[pdflang={en-US},pdftex]{hyperref}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+
+% Some optional stuff you might like/need.
+\usepackage{microtype}        % Improved Tracking and Kerning
+% \usepackage[all]{hypcap}    % Fixes bug in hyperref caption linking
+\usepackage{ccicons}          % Cite your images correctly!
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+% If you want to use todo notes, marginpars etc. during creation of
+% your draft document, you have to enable the "chi_draft" option for
+% the document class. To do this, change the very first line to:
+% "\documentclass[chi_draft]{sigchi}". You can then place todo notes
+% by using the "\todo{...}"  command. Make sure to disable the draft
+% option again before submitting your final document.
+\usepackage{todonotes}
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{Allostasis Machines: a model for understanding internal states and technological environments}
+\def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\emptyauthor{}
+\def\plainkeywords{Authors' choice; of terms; separated; by
+  semicolons; include commas, within terms only; this section is required.}
+\def\plaingeneralterms{Documentation, Standardization}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{
+    \def\UrlFont{\sf}
+  }{
+    \def\UrlFont{\small\bf\ttfamily}
+  }}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+% Use \plainauthor for final version.
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  pdfdisplaydoctitle=true, % For Accessibility
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+  hypertexnames=false
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{\plaintitle}
+
+\numberofauthors{4}
+\author{%
+  \alignauthor{Bradly Alicea\\
+    \affaddr{Orthogonal Research and Education Laboratory}\\
+    \affaddr{Champaign, IL  USA}\\
+    \email{bradly.alicea@outlook.com}}\\
+  \alignauthor{Daniela Cialfi\\
+    \affaddr{University of Chieti-Pescara}\\
+    \affaddr{Pescara, Italy}\\
+    \email{danielacialfi@gmail.com}}\\
+  \alignauthor{Anson Lim\\
+    \affaddr{Orthogonal Research and Education Laboratory}\\
+    \email{ansonzlim@gmail.com}}\\
+    \alignauthor{Jesse Parent\\
+    \affaddr{Orthogonal Research and Education Laboratory}\\
+    \email{jtparent2018@gmail.com}}\\
+}
+
+\maketitle
+
+\begin{abstract}
+In the present paper we will approach enactivism from the perspective of internal regulation: while the environment shapes the organism, it is also true that organisms have complex internal states with regulatory machinery with a set of continuous phenotype-environment interactions. The aim of the present paper is to provide a visual means to analyze these interactions in individuals and computational agents alike.  An essential component of our approach is the representation of continuous internal states through the usage of the single continuous indicator we call an Allostasis Machine (AM). Consequently, we consider potential perturbation regimes for both naturalistic and virtual environments: within the naturalistic cases, it is possible to observe the effects of perturbations in isolation, or as overlapping, multiplicative events. In virtual cases, we can observe perturbations as the outcome of both realistic and fantastical environments. To conclude, we discuss how AMs can be utilized to improve our understanding of both the theoretical basis of embodied interaction and the dynamic regulation of complex psychophysiological states.
+\end{abstract}
+
+
+% ACM Classfication
+
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10003120.10003121.10003126</concept_id>
+       <concept_desc>Human-centered computing~HCI theory, concepts and models</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Human-centered computing~HCI theory, concepts and models}
+
+% Author Keywords
+\keywords  _Cognitive Modeling; Complex Systems; Dynamical Systems; Allostasis
+
+% Print the classification codes
+\printccsdesc
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10003120.10003121.10003126</concept_id>
+       <concept_desc>Human-centered computing~HCI theory, concepts and models</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Human-centered computing~HCI theory, concepts and models}
+
+\section{Workshop Contribution Summary}
+
+By proposing a model of allostasis machines, we wish to address three issue with respect to real-time cognition and cognitive complexity: characterizing responses to naturalistic and technical environments as a dynamical system, providing a means to describe and perhaps predict regulatory changes over time. While allostasis machines apply a cybernetics approach, they also serve as a visualization to describe changes at multiple scales of the human user. Allostasis machines can provide insight into specific psychophysiological measures such as EEG or EKG, while also serving as a metric of change for specific cognitive functions such as real-time attention. Allostasis machines can also be used to visualize hard-to-measure phenomena such as perceptual stability in a naturalistic setting. By shifting 
+the metaphor of nervous system from the computer analogy to a language of dynamic regulation, we plant the seeds for a new area of academic inquiry (Neuro-HCI). This submission serves as a first step towards developing a quantitative model of allostasis that approximates influences of both a user's biology (bottom-up influences) and interactions between the body and environment (top-down influences). In this way allostasis machines advance our knowledge of human performance as a biologically-situated enactive system, particularly during continuous interactions with technological environments such as virtual environments and touch screens.
+
+\section{Introduction}
+
+There are many exciting opportunities to unify Human-Computer Interaction (HCI) concepts with Neuroscience. Some of these involve the implementation of brain-computer interfaces \cite{zander}, which results in a number of intentional and unintentional feedback mechanisms \cite{ritter}. Contrary to that approach, we propose that both the Neuro-HCI interdisciplinary relationship and the associated feedback mechanism is much richer: feedback mechanisms result in dynamic regulation, and can be understood as a relationship between the body, the internal model, and the environment.\\
+In this context, we propose that the brain is not a computer, or extension of a computer, but an internal model containing an Allostasis Machine (AM): it acts as integrators of environment and innate mechanisms, which result in a complex and highly nonlinear internal state trajectory over time. To understand the behavior of this organic machine, we will discuss the role of allostasis in physiological regulation, which is influenced by physiological adaptation, physiological constraints, learning, and the fluctuations in the environment.\\
+In this context, we propose that the brain is not a computer, or extension of a computer, but an internal model that provides output to an Allostasis Machine (AM). AMs are composed of two parts, an internal model and a dynamical representation of internal model output, the latter of which produced a complex and highly nonlinear internal state trajectory over time. We derive our definition of a machine from \cite{bongard-levin}: AMs are an integrative mechanism that enable prediction of behavior at multiple scales. AMs are a representation of internal state as it interacts with the environment. In this way AMs are governed by the constraints of both environmental physics and cell/molecular biology of the nervous system. To understand the behavior of this organic machine, we will discuss the role of allostasis in physiological regulation, which is influenced by physiological adaptation, physiological constraints, learning, and the fluctuations in the environment.
+
+\subsection{Role of AMs in Neuro-HCI Systems}
+We can begin to understand the role of AMs in Neuro-HCI systems by understanding how the interactions between brain, behavior, and environment are characterized by a form of self-organizing stability called autopoiesis. Autopoietic systems \cite{maturana-varela} are defined by fluctuating interactions between parts of a system that continually change as they interact with the environment. This not only characterizes the interactivity of a Neuro-HCI system, but directly supports the notion that the stability of a given AMs as contingent upon both its short- and long-term history. When autopoiesis is disrupted through anti-homeostatic conditions \cite{valentinov}, a system's organization disintegrates and in a Neuro-HCI leads to poor performance. On the other hand, autopoietic systems can demonstrate learning when the system's configurations are transformed in a beneficial manner \cite{winograd-flores}. The effect of perturbations on such a system can be demonstrated by the role of capacity in attention and memory. As a perturbation is experienced, the current configuration of the internal model can overcome low-magnitude perturbations, and capacity is maintained. At the same time, the internal model changes its configuration so that adaptive (or maladaptive) changes become possible. In an example where perturbation strength is held constant, the internal model will adapt and become more robust to future perturbation. In walking through our examples of AMs, the angle of perturbation and recovery characterize the strength of the perturbation and the recovery capacity of the internal model, respectively.\\
+The relationship between information processing capacity and noise is also a very important component of internal regulation. It has been proposed \cite{meacham-casanova} that so-called pink (1/f) noise characterizes interaction patterns (or cognitive coupling) between individuals and the technological environment. As noise is an integral feature of interaction, most of the noise is tolerable to the regulatory capacity of the internal model. However, the individual can experience large bursts of nonlinear turbulence that occur at multiple scales of complexity \cite{holden}. Multi-scale noise can occur in many different types of Neuro-HCI systems, including sensorimotor control \cite{bennett}. Experiencing noise in this unpredictable way can overwhelm the individual’s capacity to recover. Understanding the strategies used by an individual in the situations requires both a more formal representation of internal regulation and more explicit internal model mechanisms for the triggering/alleviation of breakdowns in cognitive coupling. The AM approach captures this quite well: as we will see, the combination of a self-regulating internal model and a dynamical representation allow us to observe the effects of these potential instabilities on performance in a naturalistic content.
+
+\subsection{Homeostasis as Internal Regulation}
+From our perspective, the nervous system is an embodied, autopoietic system in which stability is determined by dynamic regulation. While we propose that this form of regulation involves allostasis, and particularly allostatic drive, it is necessary to revisit Cannon’s \cite{Cannon:1930:TWB} original concept of homeostasis. Homeostasis refers to the regulation of internal state relative to a set point or equilibrium, which can be derived from properties of the organism such as stress, psychophysiological systems, or emotional state. One demonstration of homeostasis in intelligent systems is W.R. Ashby’s Homeostat \cite{Ashby:1960:DFB}, which was the first machine to maintain a steady state in the face of varying environmental input. Furthermore, homeostasis allows us to think about regulation in terms of feedback loops. Von Bertalanffy \cite{Bertalanffy:1968:GST} describes this diagrammatic arrangement as circular, and has been used to describe the nonlinear effects resulting from interactions between environmental inputs and internal feedback. Homeostasis is often said to be regulation of the internal “milieu”, which implies that a very broad conceptual variable is responsible for our measurement of this state. An internal state governed by homeostasis is an autonomous adaptive system that acquires regulatory capacity either actively through encoding memories or passively through an ability to recall past events \cite{Dworkin:1993:LPR}.  Consequently, homeostasis, according to Puglisi et al \cite{puglisi} is an equilibrium model, which does not allow us to represent many far-from-equilibrium phenomena.\\
+While we can think of homeostatic regulation as a vectorized dynamical system (not unlike time-series measurements of a thermostat), applying homeostasis as a model for characterizing change in the internal system forces us to reevaluate the notion of the physiological milieu. Bernard initially conceived of the internal milieu as an inherently fixed system that is able to perfectly match any challenge imposed by its environment \cite{gross}. The modern understanding of homeostasis predicts that internal systems make two types of adaptations: a regulatory adaptation to match the set point, and a dynamic adaptation that allows the internal system to expand the range of conditions under which the set point can be maintained.This latter type of adaptation allows the internal system to expand (and potentially contract) its homeostatic range \cite{davies}, which ultimately requires us to think more broadly regarding the existence of stable states in our internal system.
+
+\subsection{Allostasis as Dynamic Homeostasis}
+While homeostasis allows us to think about internal regulation over time, it does not lend itself to the application of a more formal dynamical systems approach. Sterling \cite{sterling}, \cite{sterling:allostasis} and Sterling and Eyer \cite{fisher:newparadigm} have proposed allostasis as an alternative to homeostasis. In their formulation, allostasis provides a set of regulatory principles with respect to homeostasis, particularly by introducing a formal mechanism for change over time (allostatic drive). Allostatic drive occurs when a system is perturbed in some way by the environment. Traditionally, these perturbations take the form of psychopsychological stressors, but can also be represented by phenomena such as multitasking distractions in a model of attentional capacity. Other authors such as Corcoran et al \cite{corcoran} and Pezzulo et al \cite{pezzulo} have made the claim that allostasis is a predictive form of inference, and allows our internal model to respond to future challenges in an anticipatory fashion. The mechanism of allostatic drive, along with the cognitive implications of allostatic control enable an internal model’s trajectory to move away from the original setpoint and find new dynamic equilibria.
+
+
+\section{Allostasis Machines}
+
+AMs are vectors that capture the perturbations and stable states of a dynamical system. Given an initial condition (baseline), this vector can either suffer negative deflections due to environmental perturbation or positive recoveries due to the adaptability of an individual’s internal model. The net movement of the vector over time captures allostatic drive, which leads to a regulated state. At any moment during this process, a perturbation can be delivered to the internal state: the perturbation can either temporarily distort the vertical (y-axis) component of the vector. Consequently, the process either returns to normal or creates a hysteretic distortion where the vector does not return to baseline. A generic example of an AMs is shown in Figure 1.\\
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.7\columnwidth]{figures/fig1}
+  \caption{A non-technical example of an AMs internal state output trajectory, from initial condition to regulated state. Inset: demonstration of the flow of time, from initial condition to regulated state. }~\label{fig:figure1}
+\end{figure}
+\subsection{Complexity of the Internal State}
+According to Bernard’s naive assumptions about the internal milieu \cite{Ashby:1960:DFB},the selective representations of most cognitive models need to to be considered as a complex, dynamical system. Yet internal states are much more complicated than the output of a simple dynamical system. Based on the variety of internal models featured in the neuroscience literature, such as those representing the cerebellum \cite{wolpert} and attention schema for subjective processing \cite{graziano}, internal models generate representations of cognitive states that are directly relevant to behavioral outputs. As such, they could be defined as invariant to psychophysiological states or innate mechanisms that might influence this state. This becomes important when we take into consideration regulatory mechanisms that determine an individual’s internal state as it actively explores its environment. \\
+These innate mechanisms can be represented in a number of ways. Computational representations of the genome \cite{albert}, \cite{aguilar}, particularly gene expression networks (GRNs, see \cite{cussat}), can approximate both the constraints and adaptive capacity of an organism’s internal biology on processing environmental inputs. Particularly interesting in the phenomenon of synthetic effects that occur when multiple genes interact with each other \cite{sanford}. This level of description is utilized in the internal model to facilitate robust and vulnerable responses to environmental perturbations. Nonlinear effects also emerge from the operation of the internal model, as gene expression interacts richly with the multiple sensory channels of naturalistic interaction with the environment.   
+
+
+\subsection{Trajectories of the Internal State}
+
+Although Figure 1 is meant to capture event-oriented signals related to naturalistic behavior, the evolution of an internal model is open-ended \cite{adam} in nature. In the context of AMs, open-ended evolution is the continual reconfiguration of the internal model with no explicit goal or objective. This means AMs can sojourn to new regulatory regimes (and ultimately stable states) that correspond to adaptive changes due to continual interaction with the environment. The representation of internal model dynamics captures this dynamic balance between environmental influence and biological robustness as a generic dynamical system. Critically, our representation of internal model output (Figure 1) captures the strength of perturbations and recovery in the form of relative magnitudes and phase angles (Figure 2). \\
+Yet how do we understand these trajectories in terms of specific interactions with tasks and the environment? One possible definition, rooted in Psychophysics, is a sensory signal that changes its magnitude with respect to time. Moving your fingertips over a ridged surface results in environmental perturbations of a given frequency and duration because perturbation frequency depends upon the spatial location of each ridge as well as the temporal interval between each ridge. This is further dependent on the speed of the touch effector, which is modulated by feedback from the nervous system. By contrast, perturbation duration involves both speed of the touch effector and the overall capacity of the internal state to withstand perturbations. In essence, this can be reduced to a simple oppositional relationship: robustness of the internal state and its trajectory versus the magnitude/duration of perturbation. \\
+From this definition we can understand several components that influence the dynamical trajectory of our AM. Figure 2 demonstrates these steps in graphical form. The first step is to establish a baseline state (Figure 2a). Then a single perturbation of a given strength is delivered to the internal state (Figure 2b). This magnitude has an effect on the strength of a single perturbation (Figure 2c), which drives the state away from the baseline in a negative direction. Perturbation depth is generally at a 45 degree angle to the baseline, but can be characterized by variable phase angles depending on whether the perturbation is encountered in a gradual or sudden manner. In our haptic ridges example, perturbations are rather sharp. By contrast, haptic exploration of a thermal gradient would be more gradual. \\
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.7\columnwidth]{figures/fig2}
+  \caption{A diagram of the external perturbation/internal state trajectory relationship. Lack of recovery capacity (e.g. hysteresis) of our internal state trajectory is equivalent to allostatic drive}~\label{fig:figure2}
+\end{figure}
+
+This leads us to a refractory period, during which the state trajectory generally recovers at a symmetrical phase angle to the perturbation (Figure 2d). Once again, this can depend on the application context. However, the recovery of an internal state trajectory does not always result in a return to the baseline state. When recovery is not equivalent to perturbation strength, then the trajectory is said to be hysteretic. Hysteresis might result from multiple perturbations in rapid succession, or from an insufficient memory of the previous state. The latter will be common for out-of-distribution magnitudes. Finally, the recovered internal state trajectory (Figure 2e) is dependent upon the timing of additional perturbations, which can determine the likelihood of transition to a new state. In material science, hysteresis is often referred to as a form of memory \cite{ortin}. While a memory system is not made explicit in AMs, they nevertheless serve an integral role of their function.\\
+One area for further understanding is how to characterize the relative strength of a perturbation. Even when perturbations are described in terms of single sensations (quantities such as Newtons or Lumens), it is hard to describe their effect on the internal state. One way to do this is to define the baseline state as a mean background level of some sensory channel, with local deviations from this value as a perturbation of magnitude \textit{m}. Corresponding to this is a distribution function that can be estimated for the organism or agent that describes a general degree of robustness to outliers, rare events, and out-of-distribution phenomena.
+
+
+\subsection{Examples from Specific Environmental Representations}
+AMs are broadly applicable to a wide range of Neuro-HCI systems. Our approach is particularly amenable to naturalistic experiments, where organisms or agents are allowed to freely explore their environment. Future work will also include the study of cognitive phenomena such as visual flow and spatial cognition. In these cases, perturbations would be introduced through controlled misalignments of visual cues and affordances. This will require the integration of AMs with agent-based models such as developmental Braitenberg Vehicles \cite{bradly_categories} or serve as predictive models for Neuroimaging and Psychophysiological data. \\
+As the AM approach might also serve as the basis for computational models of human-computer interaction, one highly relevant area is the study of virtual environments. With respect to hyperrealistic virtual environments, perturbations might take the form of latencies and stimuli of differential resolution. More impressionistic and fantastical virtual representations are less dependent on being as faithful to realism. However, affordances are still required to navigate the environment, and disruptions to their recognizability and relative location may serve to introduce perturbations of different frequencies and magnitudes. \\
+AMs also allow us to model adaptation to virtual environments that occur both as a consequence of sensory accommodation \cite{redding} and longer-term biological plasticity \cite{kim}. For example, we might expect the ability to recover from a perturbation to be weakened upon first entering the virtual environment, while accommodation allows for the response to perturbation to be more robust over time \cite{redding}. Similarly, walking on a treadmill at degrees of incline while interacting with a CAVE environment \cite{kim} can have the same effect on psychophysiological indicators of performance.  
+
+\section{Discussion}
+
+AMs are decoupled from measurements of neuronal or network output state, which makes them controversial as a model of intelligent behavior. Although they are simplistic representations for systems with many interacting components, they nevertheless serve as a heuristic to understand the mapping between internal state and the effects of a naturalistic environment. We can also use AMs to understand the effects of feedback at multiple temporal scales. This might be useful in the approximation of phenomena such as predictive processing \cite{nave}. Indeed, AMs allow for both minimal representational capacity and evaluation of error minimization \cite{williams}. It is important to stress that “evaluation” does not imply optimization: in the case of virtual environments, selective mismatch might be a desirable feature of the interaction. 
+\\
+Furthermore, considering AMs from the perspective of existing theoretical work on embodied interaction is also important. While we define a simple duality between an internal model and the external environment, affordances encountered in the environment present three- way interactions between an internal model, an external environment, and the body (morphology) itself \cite{Dourish:2001:WAI}. While morphology mediates the interaction between internal and external worlds in this relationship, representations of internal state serve to mediate between innate mechanisms and environmental stresses. AMs might also help us understand how technology usage interplays with the internal state. The idea that technology becomes incorporated into the body over time \cite{clark} can be demonstrated quantitatively using the AM approach. This can be accomplished by using a range of model systems as a quantitative basis for a given trajectory. Examples of these include directly measuring the magnitude of perturbations such as attentional distractions or inertial forces, employing dimensionality reduction techniques on neurophysiological measurements, and using reinforcement learning simulations to derive quantitative learning curves.\\
+As perturbations are disruptions to performance, they result not only from purely environmental factors, but from interactions with affordances. Under normal circumstances, interactions with affordances facilitate smooth interactions \cite{chemero}. For example, doorknobs can afford twisting movements, while handles afford pulling movements. When these affordances are unclear or purposefully decoupled from environmental function, a specific perturbation is introduced. In the language of interaction, the information transfer rate between environment and individual is decreased due to an increase in noise \cite{hornback-oulasvirta}. This can be understood in the context of task performance and tool use. Tools that are compatible with the individual, particularly those that require a set of familiar skills, serve to minimize noise and maintain an allostasis machine in a stable state with little to no hysteretic response.\\ 
+Tools that are well-practised also serve as extensions of the body schema \cite{bergstrom}, which has a basis in Primate physiology \cite{maravita-iriki}. The idea of tool embodiment has been developed by /cite{alzayat} to demonstrate how the internal model, tools, and the environment interact to form a functional unit. As a given tool becomes familiar to the individual, the tool becomes an extension of the body schema. This involves attentional shifts to the task rather than the tool, thus improving performance on the tasks themselves. This is particularly advantageous in virtual environments, where tools are not as familiar as those found in real-world settings. This allows for technologies (tools in the environment) to become transparent with respect to the individual /cite{wheeler}, thus acting as a type of affordance that assists in task performance. We can also interpret the incorporation of tools and other components of the environment into the body schema as a form of allostasis. The notion of allostatic control is a form of internal model regulation that acts as a form of selection for configurations that minimise expected free energy during future interactions /cite{kiverstein-sims}. Not only does this imply that prediction is a key component in regulation, but also that internal regulation is constrained by energetic processes.
+\\
+There are several problem domains that might provide potential use cases in the future. The first of these involve the use of sensorimotor affordances that require a smooth action-perception loop and minimize the number and magnitude of perturbations during performance. This could include something like a handwriting-assistance technology for people with movement disorders. Musical interfaces that enable people to keep rhythm with a task is another potential application domain. The regulation and maintenance of spatial context is yet another potential use case, whether that be in terms of incorporating landmarks into the body schema or through eliminating spatial perturbations due to mental rotations. Finally, these domains can be combined in the composition of virtual environments, where perturbations are introduced due to a host of potential cognitive mismatches.\\
+Moreover, AMs can also be applied to a broad range of agent-based settings, from social interaction to tests of biopsychological variation across a common set of interactions. In the case of social interaction, the AMs of different individuals can be compared during cooperation and competition. AMs also lend themselves to understanding the psychophysiology of cognitive states, particularly during continuous tasks like driving \cite{lohani}. We can even use AMs as the basis for game-theoretic analysis, as switching between various internal states can be modeled as a strategic pursuit. In conclusion, it is possible to use agent-based modeling approaches to better understand variation in AMs with respect to the potential difficulty of an environment given a large number of possible internal representations.   
+
+\section{Acknowledgments}
+
+We thank attendees of the Saturday Morning NeuroSim group and members of the Orthogonal Research and Education Laboratory Slack for their input.
+
+% Use a numbered list of references at the end of the article, ordered
+% alphabetically by first author, and referenced by numbers in
+% brackets~\cite{ethics, Klemmer:2002:WSC:503376.503378,
+%   Mather:2000:MUT, Zellweger:2001:FAO:504216.504224}. For papers from
+% conference proceedings, include the title of the paper and an
+% abbreviated name of the conference (e.g., for Interact 2003
+% proceedings, use \textit{Proc. Interact 2003}). Do not include the
+% location of the conference or the exact date; do include the page
+% numbers if available. See the examples of citations at the end of this
+% document. Within this template file, use the \texttt{References} style
+% for the text of your citation.
+
+% Your references should be published materials accessible to the
+% public.  Internal technical reports may be cited only if they are
+% easily accessible (i.e., you provide the address for obtaining the
+% report within your citation) and may be obtained by any reader for a
+% nominal fee.  Proprietary information may not be cited. Private
+% communications should be acknowledged in the main text, not referenced
+% (e.g., ``[Robertson, personal communication]'').
+
+% Balancing columns in a ref list is a bit of a pain because you
+% either use a hack like flushend or balance, or manually insert
+% a column break.  http://www.tex.ac.uk/cgi-bin/texfaq2html?label=balance
+% multicols doesn't work because we're already in two-column mode,
+% and flushend isn't awesome, so I choose balance.  See this
+% for more info: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+%
+% Note that in a perfect world balance wants to be in the first
+% column of the last page.
+%
+% If balance doesn't work for you, you can remove that and
+% hard-code a column break into the bbl file right before you
+% submit:
+%
+% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
+% in-an-ieee-paper-if-using-bibtex
+%
+% Or, just remove \balance and give up on balancing the last page.
+%
+\balance{}
+
+
+% BALANCE COLUMNS
+\balance{}
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{sample}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
