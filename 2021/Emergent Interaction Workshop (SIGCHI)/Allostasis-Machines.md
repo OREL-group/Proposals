@@ -1,7 +1,5 @@
 https://emergentinteraction.github.io/ part of https://chi2021.acm.org/ 
 
-
-
 # EMERGENT INTERACTION Complexity, Dynamics, and Enaction in HCI
 Status: Accepted!
 
